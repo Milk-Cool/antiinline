@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { Telegraf } from "telegraf";
 
 const allowed = ["wiki", "vid", "pic", "gif"];
