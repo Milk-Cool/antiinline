@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { Telegraf } from "telegraf";
 
-const allowed = ["wiki", "vid", "pic", "gif"];
+const allowed = process.env.ALLOWED ? process.env.ALLOWED.split(",").map(x => x.trim()) : ["wiki", "vid", "pic", "gif"];
 
 const bot = new Telegraf(process.env.TOKEN!);
 bot.on("message", ctx => {
